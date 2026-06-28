@@ -1,0 +1,827 @@
+<!doctype html>
+
+<html class="light" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>CopyCentro - Librería y Centro de Impresión en Rosario</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100..900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-error-container": "#93000a",
+              "surface-container-high": "#efe6e7",
+              primary: "#00658d",
+              "surface-container-low": "#fbf1f2",
+              "on-secondary-fixed-variant": "#8d0051",
+              "inverse-primary": "#82cfff",
+              "on-primary": "#ffffff",
+              "secondary-container": "#e00085",
+              "on-secondary-fixed": "#3e0021",
+              "on-tertiary": "#ffffff",
+              "surface-tint": "#00658d",
+              "tertiary-fixed-dim": "#d5ca00",
+              "primary-fixed-dim": "#82cfff",
+              "on-tertiary-container": "#3e3a00",
+              "surface-container-highest": "#e9e0e1",
+              "primary-container": "#00aeef",
+              "secondary-fixed-dim": "#ffb0cc",
+              error: "#ba1a1a",
+              "on-surface-variant": "#3e4850",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary": "#ffffff",
+              "secondary-fixed": "#ffd9e4",
+              "tertiary-container": "#afa600",
+              "inverse-surface": "#342f30",
+              "on-tertiary-fixed": "#1e1c00",
+              "on-tertiary-fixed-variant": "#4d4800",
+              background: "#fff8f8",
+              "on-surface": "#1e1b1c",
+              "error-container": "#ffdad6",
+              secondary: "#b30069",
+              "tertiary-fixed": "#f3e700",
+              "outline-variant": "#bdc8d1",
+              "surface-container": "#f5eced",
+              "surface-dim": "#e1d8d9",
+              tertiary: "#666000",
+              "on-primary-fixed": "#001e2d",
+              "on-error": "#ffffff",
+              "on-background": "#1e1b1c",
+              "primary-fixed": "#c6e7ff",
+              outline: "#6e7881",
+              surface: "#fff8f8",
+              "inverse-on-surface": "#f8efef",
+              "on-primary-container": "#003e58",
+              "on-primary-fixed-variant": "#004c6b",
+              "surface-variant": "#e9e0e1",
+              "on-secondary-container": "#fffbff",
+              "surface-bright": "#fff8f8",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              xs: "4px",
+              base: "8px",
+              md: "24px",
+              "margin-mobile": "16px",
+              sm: "12px",
+              gutter: "24px",
+              "margin-desktop": "64px",
+              xl: "80px",
+              lg: "48px",
+            },
+            fontFamily: {
+              "body-md": ["Plus Jakarta Sans"],
+              "headline-xl": ["Plus Jakarta Sans"],
+              "body-lg": ["Plus Jakarta Sans"],
+              "headline-md": ["Plus Jakarta Sans"],
+              "headline-lg-mobile": ["Plus Jakarta Sans"],
+              "headline-lg": ["Plus Jakarta Sans"],
+              "label-md": ["Plus Jakarta Sans"],
+            },
+            fontSize: {
+              "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+              "headline-xl": [
+                "48px",
+                {
+                  lineHeight: "56px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "800",
+                },
+              ],
+              "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+              "headline-md": [
+                "24px",
+                { lineHeight: "32px", fontWeight: "700" },
+              ],
+              "headline-lg-mobile": [
+                "28px",
+                { lineHeight: "36px", fontWeight: "700" },
+              ],
+              "headline-lg": [
+                "32px",
+                { lineHeight: "40px", fontWeight: "700" },
+              ],
+              "label-md": [
+                "14px",
+                {
+                  lineHeight: "20px",
+                  letterSpacing: "0.01em",
+                  fontWeight: "600",
+                },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        background-color: #fff8f8;
+        color: #1e1b1c;
+      }
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+      }
+      .service-card:hover .service-icon {
+        transform: scale(1.1) rotate(5deg);
+        transition: transform 0.3s ease;
+      }
+      details > summary {
+        list-style: none;
+      }
+      details > summary::-webkit-details-marker {
+        display: none;
+      }
+      .bg-vibrant-cyan {
+        background-color: #e0f7ff;
+      }
+      .bg-vibrant-magenta {
+        background-color: #ffeff7;
+      }
+      .bg-vibrant-yellow {
+        background-color: #fffee0;
+      }
+    </style>
+  </head>
+  <body class="bg-surface text-on-surface">
+    <!-- TopNavBar -->
+    <header
+      class="w-full z-50 bg-white/95 backdrop-blur-md shadow-sm px-8 py-0 flex flex-row items-center justify-between max-w-screen-2xl mx-auto"
+    >
+      <div class="flex items-center gap-4">
+        <img
+          alt="CopyCentro Logo"
+          class="h-40 w-auto object-contain"
+          src="logo.jpeg"
+        />
+        <!-- <span class="hidden md:block text-headline-lg font-black text-on-surface">CopyCentro</span> -->
+      </div>
+      <nav class="hidden lg:flex items-center gap-base">
+        <a
+          class="text-lg font-label-md text-on-surface-variant hover:text-primary transition-colors px-3 py-1"
+          href="#escolar"
+          >Escolar</a
+        >
+        <a
+          class="text-lg font-label-md text-on-surface-variant hover:text-primary transition-colors px-3 py-1"
+          href="#comercial"
+          >Comercial</a
+        >
+        <a
+          class="text-lg font-label-md text-on-surface-variant hover:text-primary transition-colors px-3 py-1"
+          href="#artistica"
+          >Artística</a
+        >
+        <a
+          class="text-lg font-label-md text-on-surface-variant hover:text-primary transition-colors px-3 py-1"
+          href="#centrodeimpresiones"
+          >Centro de impresiones</a
+        >
+        <a
+          class="text-lg font-label-md text-on-surface-variant hover:text-primary transition-colors px-3 py-1"
+          href="#juguetes"
+          >Juguetes</a
+        >
+        <a
+          class="text-lg font-label-md text-on-surface-variant hover:text-primary transition-colors px-3 py-1"
+          href="#electronica"
+          >Electrónica</a
+        >
+        <a
+          class="text-lg font-label-md text-on-surface-variant hover:text-primary transition-colors px-3 py-1"
+          href="#nosotros"
+          >Nosotros</a
+        >
+        <a
+          class="text-lg font-label-md text-on-surface-variant hover:text-primary transition-colors px-3 py-1"
+          href="#contacto"
+          >Contacto</a
+        >
+      </nav>
+    </header>
+    <main class="pt-0 md:pt-0">
+      <!-- Hero Section -->
+      <section
+        class="relative w-full min-h-[75vh] flex items-center justify-start overflow-hidden mb-xl"
+      >
+        <div class="absolute inset-0 z-0">
+          <div
+            class="w-full h-full bg-cover bg-center"
+            style="background-image: url(&quot;hero-copycentro.jpg.png&quot;)"
+          ></div>
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-[#0A2342]/90 via-[#0A2342]/55 to-transparent"
+          ></div>
+        </div>
+        <div class="relative z-10 text-left max-w-xl ml-16">
+          <h1 class="text-5xl font-black text-white leading-tight">
+            Todo lo que buscás, en un solo lugar
+          </h1>
+          <p class="text-body-lg font-body-lg text-white/90">
+            Librería escolar y comercial, artículos de oficina, fotocopias,
+            impresiones, escaneados, artística, electrónica y juguetes.
+          </p>
+          <button
+            class="bg-primary text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:scale-105 transition-all"
+          >
+            Ver productos y servicios
+          </button>
+        </div>
+      </section>
+      <!-- Services Section -->
+      <section
+        class="px-4 md:px-margin-desktop py-xl bg-vibrant-cyan rounded-[3rem] mx-4 my-xl"
+      >
+        <h2
+          class="text-headline-lg font-headline-lg text-center mb-xl text-primary"
+        >
+          Nuestros Servicios
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+          <!-- Artículos Escolares -->
+          <div
+            id="escolar"
+            class="service-card group relative bg-white rounded-2xl p-md overflow-hidden hover:shadow-xl transition-all flex flex-col gap-4 border-b-4 border-primary/20"
+          >
+            <div class="h-48 rounded-xl overflow-hidden mb-base">
+              <img
+                class="w-full h-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw5KR3w-XggGYVY9bALCN9mSc2DslOw52J-tkpAofBbOJZEPuRocf588aUX7W6W7J8EA0upi7S3CMG6wZRgZJF_6mW14VRHedFpZGJ9_iJ5sX4oKzM10T7IFHEOMUeRycyUe1d-_fxPav5Djbf0UsXslXfebgFJjudf9npviQP3MIRJznHM04Lka4uC2h4qROTl8wAxyfH1R56Z5dCeEZqv9S5bQ2AcK0q7K1_y8bIpOccjqGv87WUiCV-9b1NFYZfvRXSqjLmDg"
+              />
+            </div>
+            <div class="flex items-center gap-base">
+              <span class="text-headline-md service-icon">📚</span>
+              <h3 class="text-headline-md font-headline-md text-primary">
+                Escolar
+              </h3>
+            </div>
+            <p class="text-body-md font-body-md text-on-surface-variant">
+              Todo lo que los chicos necesitan para brillar en el aula.
+            </p>
+          </div>
+          <!-- Artículos de Oficina -->
+          <div
+            id="comercial"
+            class="service-card group relative bg-white rounded-2xl p-md overflow-hidden hover:shadow-xl transition-all flex flex-col gap-4 border-b-4 border-primary-container/20"
+          >
+            <div class="h-48 rounded-xl overflow-hidden mb-base">
+              <img
+                class="w-full h-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLzuT64VFVq3ZldkFfebJSe4T2dsTp1RwcbrIlemO6jZiaguQc-lgfToYtv00apeBV6z0r8zhnIFt7xNLxq1UAoZbT8oSQhrGmLf8-uDTu-qU2PEqzrWdajqJrYCpJJBVNUb1ljxFlb0XIC76IvCWintZyOjnvo5fD17rVVb_itm-hiAnL6i_285WrCFSB2PLzzVpf5ZdMXjLxvTERZb20KfhHvZMvVWJN9DmdX_aU6r_N-eeacb77i2rggROsyMHQrSl7xxj7RA"
+              />
+            </div>
+            <div class="flex items-center gap-base">
+              <span class="text-headline-md service-icon">🖇</span>
+              <h3
+                class="text-headline-md font-headline-md text-primary-container"
+              >
+                Comercial
+              </h3>
+            </div>
+            <p class="text-body-md font-body-md text-on-surface-variant">
+              Soluciones completas para que tu empresa rinda al máximo.
+            </p>
+          </div>
+          <!-- Juguetes -->
+          <div
+            id="juguetes"
+            class="service-card group relative bg-white rounded-2xl p-md overflow-hidden hover:shadow-xl transition-all flex flex-col gap-4 border-b-4 border-tertiary/20"
+          >
+            <div class="h-48 rounded-xl overflow-hidden mb-base">
+              <img
+                class="w-full h-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBD8cg_h0OTpB-Qmxf78kufR5A2pEF_vXPGs7bIv916nJkykfhRw4ZI_S1zomtC_D6cBjqiMQP2pVBA-WNvUdziKBeivVgf86g0a5SKlMADZ2F-Au9nBc72RS2_IwLTJB271GgyPZ49S87k6ff9juqyDYwLVSTeyKFEl8bAt4omIqFFASWPD7aonFfis0QC1cP7GnzfLs7XdsVwL7MUm20RKhYxsCZR6l6HIJlJQNPkujNqMjZayzwZLsKJM2628oq-JKGxiic6aA"
+              />
+            </div>
+            <div class="flex items-center gap-base">
+              <span class="text-headline-md service-icon">🧸</span>
+              <h3 class="text-headline-md font-headline-md text-tertiary">
+                Juguetes
+              </h3>
+            </div>
+            <p class="text-body-md font-body-md text-on-surface-variant">
+              Divertite aprendiendo con nuestra selección didáctica.
+            </p>
+          </div>
+          <!-- Artística -->
+          <div
+            id="artistica"
+            class="service-card group relative bg-white rounded-2xl p-md overflow-hidden hover:shadow-xl transition-all flex flex-col gap-4 border-b-4 border-secondary/20"
+          >
+            <div class="h-48 rounded-xl overflow-hidden mb-base">
+              <img
+                class="w-full h-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5xrWkAI0J_SHZTt7IYXH_esKgDJOASA2cwm7xjqyyP3slQ6-fa3y3lWcwiwIBpypNdjCew_nQlVawq_VzznBLmaVgKzMvoMWSDs5QnL1oevE472mKECmdS4L3nPh4oTgIcs6az_5huGCPt57tggp2KUtxHiXIfY6WX6QFU9MH0-OSpV6ZZMgJSTBxa0-IFBTu8fwQF49LHJEzK8O7fAGPNFPn2ZOF4LNAwmlaYbQ5T7d19_L9Rw0a44-VFWcVYSMV8pjkq7E1gw"
+              />
+            </div>
+            <div class="flex items-center gap-base">
+              <span class="text-headline-md service-icon">🎨</span>
+              <h3 class="text-headline-md font-headline-md text-secondary">
+                Artística
+              </h3>
+            </div>
+            <p class="text-body-md font-body-md text-on-surface-variant">
+              Materiales de primera calidad para artistas y creadores.
+            </p>
+          </div>
+          <!-- Printing & Scanning -->
+          <div
+            id="centrodeimpresiones"
+            class="md:col-span-2 lg:col-span-2 bg-white rounded-2xl p-md flex items-center gap-lg border-2 border-primary/10 shadow-md"
+          >
+            <div class="flex-1">
+              <div class="flex items-center gap-sm mb-base">
+                <span class="material-symbols-outlined text-primary text-4xl"
+                  >print</span
+                >
+                <h3 class="text-headline-md font-headline-md text-on-surface">
+                  Centro de Impresiones
+                </h3>
+              </div>
+              <p
+                class="text-body-md font-body-md text-on-surface-variant mb-base"
+              >
+                Fotocopias, impresiones, escaneados y servicios profesionales
+                para estudiantes, empresas y particulares.
+              </p>
+              <ul class="flex gap-4">
+                <li
+                  class="bg-vibrant-cyan px-3 py-1 rounded-full text-label-md font-bold text-primary"
+                >
+                  A4 / Oficio / A3
+                </li>
+              </ul>
+            </div>
+            <div class="hidden sm:block w-40 h-40 rounded-xl overflow-hidden">
+              <img
+                class="w-full h-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT3Nr_hLUWfIlffj3K0QIP9XIX3XVv23Z4DE88YJwMRhnaYNPcIye0EISZD2Sh2NDbn44_HlDcAIGsOnbXIM9XlF9RgoeVhXKRG2aWbbLbhyvxPOps7zWLWMwI3QC_yR4H8coQOaydOM73yFPUoDqYAYmCgt2BIzQS6seJqr46AqV8FI5vBxZ2Rd05VmqsB6hXm8AZsSN50CF9jEGFF1PL3_8s7DS-B3AwlXesP1g5aRQszRErdQEhTOXSSipq7YTYh9kJEm6HbA"
+              />
+            </div>
+          </div>
+          <div
+            class="md:col-span-2 lg:col-span-2 bg-white rounded-2xl p-md flex items-center gap-lg border-2 border-secondary/10 shadow-md"
+          >
+            <div class="flex-1">
+              <div class="flex items-center gap-sm mb-base">
+                <span class="material-symbols-outlined text-secondary text-4xl"
+                  >memory</span
+                >
+                <h3 class="text-headline-md font-headline-md text-on-surface">
+                  Electrónica
+                </h3>
+              </div>
+              <p
+                class="text-body-md font-body-md text-on-surface-variant mb-base"
+              >
+                Productos electrónicos y accesorios para el hogar, la oficina y
+                el estudio.
+              </p>
+            </div>
+            <div class="hidden sm:block w-40 h-40 rounded-xl overflow-hidden">
+              <img
+                class="w-full h-full object-cover"
+                src="imagen_electronica.png"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Why Choose Us -->
+      <section
+        class="bg-vibrant-yellow py-xl px-4 md:px-margin-desktop rounded-[3rem] mx-4 my-xl"
+      >
+        <h2
+          class="text-headline-lg font-headline-lg text-center mb-xl text-on-surface"
+        >
+          ¿Por qué elegir CopyCentro?
+        </h2>
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-md max-w-6xl mx-auto">
+          <div class="flex flex-col items-center text-center gap-base">
+            <div
+              class="w-20 h-20 rounded-full bg-white flex items-center justify-center text-primary shadow-lg border-2 border-primary/10"
+            >
+              <span class="material-symbols-outlined text-4xl"
+                >sentiment_very_satisfied</span
+              >
+            </div>
+            <h4 class="text-label-md font-label-md font-bold">
+              Atención personalizada
+            </h4>
+          </div>
+          <div class="flex flex-col items-center text-center gap-base">
+            <div
+              class="w-20 h-20 rounded-full bg-white flex items-center justify-center text-secondary shadow-lg border-2 border-secondary/10"
+            >
+              <span class="material-symbols-outlined text-4xl">bolt</span>
+            </div>
+            <h4 class="text-label-md font-label-md font-bold">
+              Trabajos rápidos
+            </h4>
+          </div>
+          <div class="flex flex-col items-center text-center gap-base">
+            <div
+              class="w-20 h-20 rounded-full bg-white flex items-center justify-center text-tertiary shadow-lg border-2 border-tertiary/10"
+            >
+              <span class="material-symbols-outlined text-4xl">verified</span>
+            </div>
+            <h4 class="text-label-md font-label-md font-bold">
+              Calidad profesional
+            </h4>
+          </div>
+          <div class="flex flex-col items-center text-center gap-base">
+            <div
+              class="w-20 h-20 rounded-full bg-white flex items-center justify-center text-primary-container shadow-lg border-2 border-primary-container/10"
+            >
+              <span class="material-symbols-outlined text-4xl"
+                >inventory_2</span
+              >
+            </div>
+            <h4 class="text-label-md font-label-md font-bold">
+              Amplio surtido
+            </h4>
+          </div>
+          <div class="flex flex-col items-center text-center gap-base">
+            <div
+              class="w-20 h-20 rounded-full bg-white flex items-center justify-center text-on-surface shadow-lg border-2 border-outline/10"
+            >
+              <span class="material-symbols-outlined text-4xl">lightbulb</span>
+            </div>
+            <h4 class="text-label-md font-label-md font-bold">
+              Soluciones integrales
+            </h4>
+          </div>
+        </div>
+      </section>
+      <!-- Target Audience -->
+      <section class="py-xl px-4 md:px-margin-desktop text-center">
+        <h2 class="text-headline-lg font-headline-lg mb-xl">
+          Creamos para vos
+        </h2>
+        <div class="flex flex-wrap justify-center gap-lg">
+          <div
+            class="px-8 py-3 bg-vibrant-cyan rounded-full border-2 border-primary/20 text-headline-md text-primary font-bold shadow-md hover:scale-105 transition-transform cursor-default"
+          >
+            Estudiantes
+          </div>
+          <div
+            class="px-8 py-3 bg-vibrant-magenta rounded-full border-2 border-secondary/20 text-headline-md text-secondary font-bold shadow-md hover:scale-105 transition-transform cursor-default"
+          >
+            Familias
+          </div>
+          <div
+            class="px-8 py-3 bg-vibrant-yellow rounded-full border-2 border-tertiary/20 text-headline-md text-tertiary font-bold shadow-md hover:scale-105 transition-transform cursor-default"
+          >
+            Profesionales
+          </div>
+          <div
+            class="px-8 py-3 bg-blue-50 rounded-full border-2 border-primary-container/20 text-headline-md text-primary-container font-bold shadow-md hover:scale-105 transition-transform cursor-default"
+          >
+            Empresas
+          </div>
+        </div>
+      </section>
+      <!-- FAQ & Testimonials -->
+      <section
+        class="bg-vibrant-magenta py-xl px-4 md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-xl rounded-[3rem] mx-4 my-xl"
+      >
+        <div>
+          <h2 class="text-headline-lg font-headline-lg mb-lg text-secondary">
+            Testimonios
+          </h2>
+          <div class="space-y-md">
+            <div
+              class="glass-card p-md rounded-2xl shadow-sm border-l-4 border-primary"
+            >
+              <div class="flex gap-1 text-tertiary mb-base">
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >star</span
+                >
+              </div>
+              <p
+                class="text-body-md font-body-md italic mb-base text-on-surface"
+              >
+                "La mejor librería de la zona. Los trabajos de impresión son
+                impecables y el trato es súper amable."
+              </p>
+              <p class="text-label-md font-bold text-primary">
+                — Mariana G., Estudiante UNR
+              </p>
+            </div>
+            <div
+              class="glass-card p-md rounded-2xl shadow-sm border-l-4 border-secondary"
+            >
+              <p
+                class="text-body-md font-body-md italic mb-base text-on-surface"
+              >
+                "Resolvemos todo el material de oficina de mi empresa con ellos.
+                Puntualidad y excelente precio."
+              </p>
+              <p class="text-label-md font-bold text-secondary">
+                — Roberto L., Arquitecto
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2 class="text-headline-lg font-headline-lg mb-lg text-secondary">
+            Preguntas Frecuentes
+          </h2>
+          <div class="space-y-sm">
+            <details
+              class="group bg-white/60 backdrop-blur-sm rounded-xl p-base open:bg-white transition-colors border border-secondary/10"
+            >
+              <summary
+                class="flex justify-between items-center cursor-pointer font-bold text-on-surface"
+              >
+                ¿Hacen impresiones de gran formato?
+                <span
+                  class="material-symbols-outlined transition-transform group-open:rotate-180"
+                  >expand_more</span
+                >
+              </summary>
+              <p
+                class="mt-base text-body-md font-body-md text-on-surface-variant"
+              >
+                Sí, realizamos impresiones hasta A3 e impresiones tipo poster.
+              </p>
+            </details>
+            <details
+              class="group bg-white/60 backdrop-blur-sm rounded-xl p-base open:bg-white transition-colors border border-secondary/10"
+            >
+              <summary
+                class="flex justify-between items-center cursor-pointer font-bold text-on-surface"
+              >
+                ¿Puedo enviar mis archivos por WhatsApp?
+                <span
+                  class="material-symbols-outlined transition-transform group-open:rotate-180"
+                  >expand_more</span
+                >
+              </summary>
+              <p
+                class="mt-base text-body-md font-body-md text-on-surface-variant"
+              >
+                ¡Claro! Podés enviarnos tus PDF o fotos directamente por
+                WhatsApp y pasar a retirarlos cuando te confirmemos que están
+                listos.
+              </p>
+            </details>
+            <details
+              class="group bg-white/60 backdrop-blur-sm rounded-xl p-base open:bg-white transition-colors border border-secondary/10"
+            >
+              <summary
+                class="flex justify-between items-center cursor-pointer font-bold text-on-surface"
+              >
+                ¿Cuáles son los medios de pago?
+                <span
+                  class="material-symbols-outlined transition-transform group-open:rotate-180"
+                  >expand_more</span
+                >
+              </summary>
+              <p
+                class="mt-base text-body-md font-body-md text-on-surface-variant"
+              >
+                Aceptamos transferencias, Mercado Pago y todas las tarjetas de
+                crédito/débito.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+      <!-- Location Section -->
+      <section class="py-xl px-4 md:px-margin-desktop">
+        <div
+          class="bg-white rounded-[3rem] overflow-hidden grid grid-cols-1 md:grid-cols-2 shadow-xl border-4 border-vibrant-cyan"
+        >
+          <div class="p-lg flex flex-col justify-center bg-vibrant-cyan/20">
+            <h2 class="text-headline-lg font-headline-lg mb-md text-primary">
+              Encontranos en Rosario
+            </h2>
+            <div class="space-y-md">
+              <div class="flex items-start gap-base">
+                <span
+                  class="material-symbols-outlined text-primary bg-white p-2 rounded-lg shadow-sm"
+                  >location_on</span
+                >
+                <div>
+                  <p class="text-label-md font-bold text-primary">Dirección</p>
+                  <p class="text-body-md font-medium">
+                    Pte Roca 175, Rosario, Santa Fe
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-base">
+                <span
+                  class="material-symbols-outlined text-primary bg-white p-2 rounded-lg shadow-sm"
+                  >schedule</span
+                >
+                <div>
+                  <p class="text-label-md font-bold text-primary">Horarios</p>
+                  <p class="text-body-md font-medium">
+                    Lunes a Viernes: 7:00 a 19:00 hs<br />Sábados: 8:30 a 12:30
+                    hs
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-base">
+                <span
+                  class="material-symbols-outlined text-primary bg-white p-2 rounded-lg shadow-sm"
+                  >phone</span
+                >
+                <div>
+                  <p class="text-label-md font-bold text-primary">Teléfono</p>
+                  <p class="text-body-md font-medium">0341 363-1111</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="h-64 md:h-full bg-slate-100 relative">
+            <div
+              class="w-full h-full flex items-center justify-center text-primary/30"
+            >
+              <span class="material-symbols-outlined text-8xl">map</span>
+              <p
+                class="absolute bottom-4 text-label-md font-bold text-primary/60"
+              >
+                Ver en Google Maps
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="bg-surface-container-highest py-xl px-4 md:px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-lg w-full mt-xl"
+    >
+      <div class="flex flex-col gap-base">
+        <div class="flex items-center gap-3">
+          <img
+            alt="CopyCentro Logo"
+            class="h-28 w-auto"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7_jxQ_lQq0Q_HnU0Hr_AW6pzCdeUK55zTOCXsq12Whowfp39ebXwF0oXDAwAFz3_msIINbJE01N-r1TSAfWFHT3IfmfGyKZsmEbLHf6ZkvHZgr7BTFN7lTz1imN2YIa21soK0lvRfolBmfLLPRGweQIXzjjB7vvROusPBwbs9ARG0MO2mDFqZRnS0_PB5SA1ZPblJRyyMZwONaITA5nNASYyHQ8KtQfHiBB37rG-SimUojvZLiJnfXfNHlpbH3_qBMs3KlN0Vpg"
+          />
+          <h3 class="text-headline-md font-headline-md text-on-surface">
+            CopyCentro
+          </h3>
+        </div>
+        <p class="text-body-md font-body-md text-on-surface-variant">
+          Pasión por el detalle y el servicio. Tu centro de confianza en el
+          corazón de Rosario.
+        </p>
+      </div>
+      <div class="flex flex-col gap-base">
+        <h4 class="text-label-md font-bold text-secondary">Enlaces rápidos</h4>
+        <div class="flex flex-wrap gap-4">
+          <a
+            class="text-label-md font-bold text-on-surface-variant hover:text-primary transition-all"
+            href="#"
+            >WhatsApp</a
+          >
+          <a
+            class="text-label-md font-bold text-on-surface-variant hover:text-primary transition-all"
+            href="#"
+            >Email</a
+          >
+          <a
+            class="text-label-md font-bold text-on-surface-variant hover:text-primary transition-all"
+            href="#"
+            >Ubicación</a
+          >
+          <a
+            class="text-label-md font-bold text-on-surface-variant hover:text-primary transition-all"
+            href="#"
+            >Horarios</a
+          >
+        </div>
+      </div>
+      <div class="flex flex-col gap-base md:items-end justify-between">
+        <div class="flex gap-4">
+          <span
+            class="material-symbols-outlined text-secondary bg-white p-2 rounded-full shadow-sm hover:scale-110 transition-transform cursor-pointer"
+            >share</span
+          >
+          <span
+            class="material-symbols-outlined text-secondary bg-white p-2 rounded-full shadow-sm hover:scale-110 transition-transform cursor-pointer"
+            >thumb_up</span
+          >
+        </div>
+        <p
+          class="text-label-md font-bold text-on-surface-variant text-sm md:text-right"
+        >
+          © 2024 CopyCentro Rosario. Todos los derechos reservados.
+        </p>
+      </div>
+    </footer>
+    <!-- BottomNavBar (Mobile only) -->
+    <nav
+      class="fixed bottom-0 left-0 w-full flex justify-around items-center bg-white border-t border-outline-variant p-base pb-safe md:hidden z-50 shadow-2xl"
+    >
+      <a
+        class="flex flex-col items-center justify-center text-primary active:scale-90 duration-100 transition-all"
+        href="#"
+      >
+        <span class="material-symbols-outlined">home</span>
+        <span class="text-label-md font-bold">Inicio</span>
+      </a>
+      <a
+        class="flex flex-col items-center justify-center text-on-surface-variant active:scale-90 duration-100 transition-all"
+        href="#"
+      >
+        <span class="material-symbols-outlined">print</span>
+        <span class="text-label-md font-bold">Servicios</span>
+      </a>
+      <a
+        class="flex flex-col items-center justify-center text-on-surface-variant active:scale-90 duration-100 transition-all"
+        href="#"
+      >
+        <span class="material-symbols-outlined">request_quote</span>
+        <span class="text-label-md font-bold">Presupuesto</span>
+      </a>
+      <a
+        class="flex flex-col items-center justify-center text-on-surface-variant active:scale-90 duration-100 transition-all"
+        href="#"
+      >
+        <span class="material-symbols-outlined">chat</span>
+        <span class="text-label-md font-bold">WhatsApp</span>
+      </a>
+    </nav>
+    <!-- Floating Action Button -->
+    <a
+      class="fixed bottom-20 right-6 md:bottom-8 md:right-8 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all z-[60]"
+      href="https://wa.me/yournumber"
+      target="_blank"
+    >
+      <svg
+        fill="currentColor"
+        height="32"
+        viewbox="0 0 24 24"
+        width="32"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+        ></path>
+      </svg>
+    </a>
+    <script>
+      document.querySelectorAll("details").forEach((detail) => {
+        detail.addEventListener("toggle", () => {
+          if (detail.open) {
+            document.querySelectorAll("details").forEach((otherDetail) => {
+              if (otherDetail !== detail) otherDetail.removeAttribute("open");
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
