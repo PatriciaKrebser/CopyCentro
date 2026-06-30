@@ -195,7 +195,7 @@
       >
         <div class="absolute inset-0 z-0">
           <div
-            class="w-full h-full bg-cover bg-center"
+            class="absolute inset-0 bg-cover bg-center"
             style="
               background-image: url(&quot;images/hero-copycentro.jpg.png&quot;);
             "
@@ -217,6 +217,41 @@
           >
             Ver productos y servicios
           </button>
+        </div>
+      </section>
+      <!-- About Us Section -->
+      <section
+        id="nosotros"
+        class="section-soft-yellow px-4 md:px-margin-desktop py-xl"
+      >
+        <div
+          class="max-w-5xl mx-auto bg-yellow-100 rounded-3xl shadow-lg p-8 md:p-12 text-center"
+        >
+          <h2 class="text-headline-lg font-headline-lg text-primary mb-6">
+            Sobre CopyCentro
+          </h2>
+
+          <p class="text-body-lg text-on-surface-variant leading-relaxed mb-6">
+            <strong>Hace más de 20 años</strong>, CopyCentro acompaña a
+            estudiantes, profesionales, empresas y familias de Rosario desde el
+            mismo lugar, con la atención cercana y el compromiso que
+            caracterizan a un negocio familiar.
+          </p>
+
+          <p class="text-body-md text-on-surface-variant leading-relaxed mb-6">
+            A lo largo de los años hemos construido relaciones de confianza con
+            nuestros clientes, muchos de los cuales nos eligen desde hace
+            décadas. Trabajamos cada día para ofrecer un servicio rápido,
+            productos de calidad y una atención personalizada que nos
+            diferencia.
+          </p>
+
+          <p class="text-body-md text-on-surface-variant leading-relaxed">
+            En CopyCentro encontrás librería escolar y comercial, artículos de
+            oficina, artística, electrónica, juguetes, fotocopias, impresiones y
+            escaneados, todo en un solo lugar para que puedas resolver tus
+            necesidades de forma práctica y confiable.
+          </p>
         </div>
       </section>
       <!-- Services Section -->
@@ -649,135 +684,178 @@
               </div>
             </div>
           </div>
-          <div class="h-64 md:h-full bg-slate-100 relative">
-            <div
-              class="w-full h-full flex items-center justify-center text-primary/30"
+          <div class="h-64 md:h-full rounded-r-3xl overflow-hidden">
+            <iframe
+              src="https://www.google.com/maps?q=Pte%20Roca%20175,%20Rosario,%20Santa%20Fe&output=embed"
+              width="100%"
+              height="100%"
+              style="border: 0"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
             >
-              <span class="material-symbols-outlined text-8xl">map</span>
-              <p
-                class="absolute bottom-4 text-label-md font-bold text-primary/60"
-              >
-                Ver en Google Maps
-              </p>
-            </div>
+            </iframe>
           </div>
         </div>
       </section>
     </main>
-    <!-- Footer -->
     <footer
-      class="bg-surface-container-highest py-xl px-4 md:px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-lg w-full mt-xl"
+      id="contacto"
+      class="bg-white py-xl px-4 md:px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-lg w-full mt-xl"
     >
-      <div class="flex flex-col gap-base">
-        <div class="flex items-center gap-3">
+      <div class="flex flex-col gap-4 items-center text-center">
+        <div class="relative top-6 ml-2">
           <img
+            src="images/logo.jpeg"
             alt="CopyCentro Logo"
-            class="h-28 w-auto"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7_jxQ_lQq0Q_HnU0Hr_AW6pzCdeUK55zTOCXsq12Whowfp39ebXwF0oXDAwAFz3_msIINbJE01N-r1TSAfWFHT3IfmfGyKZsmEbLHf6ZkvHZgr7BTFN7lTz1imN2YIa21soK0lvRfolBmfLLPRGweQIXzjjB7vvROusPBwbs9ARG0MO2mDFqZRnS0_PB5SA1ZPblJRyyMZwONaITA5nNASYyHQ8KtQfHiBB37rG-SimUojvZLiJnfXfNHlpbH3_qBMs3KlN0Vpg"
+            class="max-h-24 w-auto object-contain"
           />
-          <h3 class="text-headline-md font-headline-md text-on-surface">
-            CopyCentro
-          </h3>
         </div>
-        <p class="text-body-md font-body-md text-on-surface-variant">
+        <p class="text-body-xl text-on-surface-variant">
           Pasión por el detalle y el servicio. Tu centro de confianza en el
           corazón de Rosario.
         </p>
       </div>
-      <div class="flex flex-col gap-base">
+
+      <div
+        class="flex flex-col gap-4 items-center text-center justify-end pb-2"
+      >
         <h4 class="text-label-md font-bold text-secondary">Enlaces rápidos</h4>
-        <div class="flex flex-wrap gap-4">
+        <div class="flex flex-col gap-2">
           <a
+            href="https://wa.me/543413631111"
+            target="_blank"
+            rel="noopener noreferrer"
             class="text-label-md font-bold text-on-surface-variant hover:text-primary transition-all"
-            href="#"
-            >WhatsApp</a
           >
+            WhatsApp
+          </a>
           <a
+            href="mailto:copycentro-libreria@hotmail.com"
             class="text-label-md font-bold text-on-surface-variant hover:text-primary transition-all"
-            href="#"
-            >Email</a
           >
+            Email
+          </a>
           <a
+            href="https://www.google.com/maps/search/?api=1&query=Copycentro+Pte+Roca+175+Rosario"
+            target="_blank"
+            rel="noopener noreferrer"
             class="text-label-md font-bold text-on-surface-variant hover:text-primary transition-all"
-            href="#"
-            >Ubicación</a
           >
-          <a
-            class="text-label-md font-bold text-on-surface-variant hover:text-primary transition-all"
-            href="#"
-            >Horarios</a
-          >
+            Ubicación
+          </a>
         </div>
       </div>
-      <div class="flex flex-col gap-base md:items-end justify-between">
-        <div class="flex gap-4">
-          <span
-            class="material-symbols-outlined text-secondary bg-white p-2 rounded-full shadow-sm hover:scale-110 transition-transform cursor-pointer"
-            >share</span
-          >
-          <span
-            class="material-symbols-outlined text-secondary bg-white p-2 rounded-full shadow-sm hover:scale-110 transition-transform cursor-pointer"
-            >thumb_up</span
-          >
-        </div>
-        <p
-          class="text-label-md font-bold text-on-surface-variant text-sm md:text-right"
-        >
+
+      <div
+        class="flex flex-col-reverse justify-start items-start gap-4 md:pl-8"
+      >
+        <p class="text-sm text-on-surface-variant font-semibold structured-mar">
           © 2024 CopyCentro Rosario. Todos los derechos reservados.
         </p>
+        <div class="flex items-center gap-5">
+          <a
+            href="https://www.facebook.com/CopycentroLibreria"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:scale-110 transition-transform w-8 h-8"
+            title="Facebook"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+              class="w-full h-full"
+            >
+              <path
+                fill="#1877F2"
+                d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.8 90.7 226.4 209.3 245V327.7h-63V256h63v-54.6c0-62.2 37-96.6 93.8-96.6 27.2 0 55.7 4.9 55.7 4.9v61.2h-31.3c-30.8 0-40.4 19.1-40.4 38.7V256h69l-11 71.7h-58V501C413.3 482.4 504 379.8 504 256z"
+              />
+            </svg>
+          </a>
+
+          <a
+            href="https://www.instagram.com/copycentrolibreria/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:scale-110 transition-transform w-8 h-8"
+            title="Instagram"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+              class="w-full h-full"
+            >
+              <defs>
+                <radialGradient id="ig-grad" cx="15%" cy="90%" r="135%">
+                  <stop offset="0%" stop-color="#FED520" />
+                  <stop offset="10%" stop-color="#F8A724" />
+                  <stop offset="30%" stop-color="#FD1D1D" />
+                  <stop offset="50%" stop-color="#D6249F" />
+                  <stop offset="100%" stop-color="#285AEB" />
+                </radialGradient>
+              </defs>
+              <circle cx="256" cy="256" r="248" fill="url(#ig-grad)" />
+              <path
+                fill="#FFF"
+                d="M256 144c-61.8 0-112 50.2-112 112s50.2 112 112 112 112-50.2 112-112-50.2-112-112-112zm0 184c-39.7 0-72-32.3-72-72s32.3-72 72-72 72 32.3 72 72-32.3 72-72 72zm113.7-185.7c0 14.3-11.6 25.9-25.9 25.9s-25.9-11.6-25.9-25.9 11.6-25.9 25.9-25.9 25.9 11.6 25.9 25.9z"
+              />
+              <path
+                fill="none"
+                stroke="#FFF"
+                stroke-width="32"
+                d="M368 112H144c-17.6 0-32 14.4-32 32v224c0 17.6 14.4 32 32 32h224c17.6 0 32-14.4 32-32V144c0-17.6-14.4-32-32-32z"
+              />
+            </svg>
+          </a>
+
+          <span
+            id="shareButton"
+            class="material-symbols-outlined text-secondary hover:scale-110 transition-transform cursor-pointer text-[32px]"
+            title="Compartir"
+          >
+            share
+          </span>
+        </div>
       </div>
     </footer>
-    <!-- BottomNavBar (Mobile only) -->
-    <nav
-      class="fixed bottom-0 left-0 w-full flex justify-around items-center bg-white border-t border-outline-variant p-base pb-safe md:hidden z-50 shadow-2xl"
-    >
-      <a
-        class="flex flex-col items-center justify-center text-primary active:scale-90 duration-100 transition-all"
-        href="#"
-      >
-        <span class="material-symbols-outlined">home</span>
-        <span class="text-label-md font-bold">Inicio</span>
-      </a>
-      <a
-        class="flex flex-col items-center justify-center text-on-surface-variant active:scale-90 duration-100 transition-all"
-        href="#"
-      >
-        <span class="material-symbols-outlined">print</span>
-        <span class="text-label-md font-bold">Servicios</span>
-      </a>
-      <a
-        class="flex flex-col items-center justify-center text-on-surface-variant active:scale-90 duration-100 transition-all"
-        href="#"
-      >
-        <span class="material-symbols-outlined">request_quote</span>
-        <span class="text-label-md font-bold">Presupuesto</span>
-      </a>
-      <a
-        class="flex flex-col items-center justify-center text-on-surface-variant active:scale-90 duration-100 transition-all"
-        href="#"
-      >
-        <span class="material-symbols-outlined">chat</span>
-        <span class="text-label-md font-bold">WhatsApp</span>
-      </a>
-    </nav>
-    <!-- Floating Action Button -->
-    <a
-      class="fixed bottom-20 right-6 md:bottom-8 md:right-8 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all z-[60]"
-      href="https://wa.me/yournumber"
-      target="_blank"
-    >
-      <svg
-        fill="currentColor"
-        height="32"
-        viewbox="0 0 24 24"
-        width="32"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
-        ></path>
-      </svg>
-    </a>
-    <script src="js/script.js"></script>
+
+    <script>
+      // 1. Control de Acordeones (Evita que queden múltiples desplegados abiertos)
+      document.querySelectorAll("details").forEach((detail) => {
+        detail.addEventListener("toggle", () => {
+          if (detail.open) {
+            document.querySelectorAll("details").forEach((otherDetail) => {
+              if (otherDetail !== detail) otherDetail.removeAttribute("open");
+            });
+          }
+        });
+      });
+
+      // 2. Control de Botón Compartir NATIVO
+      document
+        .getElementById("shareButton")
+        .addEventListener("click", async () => {
+          if (navigator.share) {
+            try {
+              await navigator.share({
+                title: "CopyCentro Rosario",
+                text: "¡Mirá la web de CopyCentro! Tu centro de confianza en el corazón de Rosario.",
+                url: window.location.href,
+              });
+            } catch (error) {
+              console.log("El usuario canceló el panel de compartir.");
+            }
+          } else {
+            // Si el navegador no tiene soporte nativo (ej. Chrome en PC de escritorio)
+            try {
+              await navigator.clipboard.writeText(window.location.href);
+              alert(
+                "¡Enlace copiado al portapapeles! Ya podés pegarlo donde quieras para compartirlo.",
+              );
+            } catch (err) {
+              console.error("Error al intentar copiar al portapapeles:", err);
+            }
+          }
+        });
+    </script>
   </body>
 </html>
